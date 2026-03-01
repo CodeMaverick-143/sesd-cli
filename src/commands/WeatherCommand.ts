@@ -5,17 +5,17 @@ import { config } from "dotenv";
 
 config();
 
-export class WeatherCommand extends BaseCommand{
+export class WeatherCommand extends BaseCommand {
     private api = new ApiService();
 
     async execute(args: string[]): Promise<void> {
         const city = args[0]
 
-        if(!city){
+        if (!city) {
             Logger.error("City name is required.")
             return
         }
-        const apiKey = process.env.Weather_API_Key;
+        const apiKey = process.env.WEATHER_API_KEY;
 
         const data = await this.api.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
 
