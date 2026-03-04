@@ -1,6 +1,6 @@
 # SESD CLI
 
-A simple and extensible command-line interface tool built with TypeScript.
+A simple and extensible command-line interface tool built with TypeScript, following Object-Oriented Programming (OOP) principles.
 
 ---
 
@@ -13,10 +13,16 @@ A simple and extensible command-line interface tool built with TypeScript.
 
 ## Features
 
-- github: Fetch basic information about a GitHub user.
-- weather: Get current weather for a specific city (requires OpenWeatherMap API key).
-- quote: Get a random inspirational quote.
-- system: Display basic system information.
+- **github**: Fetch basic information about a GitHub user.
+- **weather**: Get current weather for a specific city.
+- **quote**: Get a random inspirational quote.
+- **system**: Display basic system information.
+- **joke**: Get a random joke.
+- **crypto**: Get current prices of Bitcoin and Ethereum.
+- **password**: Generate a random secure password with flags.
+- **calc**: Basic arithmetic calculator.
+- **define**: Get the definition of an English word.
+- **advice**: Get random life advice.
 
 ## Prerequisites
 
@@ -44,48 +50,54 @@ A simple and extensible command-line interface tool built with TypeScript.
 
 ## Usage
 
-You can run the CLI using npm scripts:
+Run the CLI using `npm run dev -- [command] [args] [flags]`.
 
-### GitHub Info
+### Help & Version
 ```bash
-npm run dev github [username]
+npm run dev -- --help
+npm run dev -- --version
 ```
 
-### Weather Info
+### Examples
+
+#### GitHub Info
 ```bash
-npm run dev weather [city_name]
+npm run dev -- github [username]
 ```
 
-### Random Quote
+#### Weather Info
 ```bash
-npm run dev quote
+npm run dev -- weather [city_name]
 ```
 
-### System Info
+#### Password Generation (with flags)
 ```bash
-npm run dev system
+npm run dev -- password --length 16 --numbers --symbols
 ```
 
-## Development
-
-Build the project:
+#### Calculator
 ```bash
-npm run build
+npm run dev -- calc 10 + 5
 ```
 
-Start the compiled version:
+#### Crypto Prices
 ```bash
-npm start
+npm run dev -- crypto
+```
+
+#### Random Joke
+```bash
+npm run dev -- joke
 ```
 
 ## Tech Stack
 
-- TypeScript
-- Node.js
-- Axios (HTTP requests)
-- Commander (CLI framework)
-- Dotenv (Environment variable management)
-- Chalk (Terminal styling)
+- **TypeScript** (OOP approach with Classes and Interfaces)
+- **Node.js**
+- **Axios** (HTTP requests)
+- **Commander** (Robust CLI framework)
+- **Dotenv** (Environment variable management)
+- **Chalk** (Advanced terminal styling)
 
 ## License
 

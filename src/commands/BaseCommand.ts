@@ -1,3 +1,16 @@
+export interface CommandOption {
+  flags: string;
+  description: string;
+  defaultValue?: any;
+}
+
 export abstract class BaseCommand {
-  abstract execute(args: string[]): Promise<void>;
+  abstract readonly name: string;
+  abstract readonly description: string;
+
+  getOptions(): CommandOption[] {
+    return [];
+  }
+
+  abstract execute(args: string[], options: any): Promise<void>;
 }
